@@ -68,6 +68,7 @@ nav {
   font-family:'Nunito', sans-serif; font-weight:900; font-size:1.1rem;
   background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple));
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip: text;
   letter-spacing:3px;
 }
 .nav-links { display:flex; gap:8px; }
@@ -172,6 +173,7 @@ section {
   line-height:1.1;
   background:linear-gradient(135deg,#fff 30%,var(--neon-cyan));
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip: text;
   margin-bottom:20px;
 }
 .hero-typing-wrap {
