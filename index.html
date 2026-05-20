@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rafael Alif Ramadhan</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ══ NAVBAR ══ -->
+<nav>
+  <div class="nav-logo">RAF</div>
+  <div class="nav-links">
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#pendidikan">Pendidikan</a>
+    <a href="#skill">Skill</a>
+    <a href="#portofolio">Porto</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+</nav>
+
+<!-- ══ SHORTCUT BAR (kanan layar) ══ -->
+<div id="shortcut-bar">
+  <a class="sc-btn" href="#beranda"><span>🏠</span><span class="tooltip">Beranda</span></a>
+  <a class="sc-btn" href="#tentang"><span>👤</span><span class="tooltip">Tentang Saya</span></a>
+  <a class="sc-btn" href="#pendidikan"><span>🎓</span><span class="tooltip">Pendidikan</span></a>
+  <a class="sc-btn" href="#skill"><span>⚡</span><span class="tooltip">Skill</span></a>
+  <a class="sc-btn" href="#portofolio"><span>🗂️</span><span class="tooltip">Portofolio</span></a>
+  <a class="sc-btn" href="#kontak"><span>✉️</span><span class="tooltip">Kontak</span></a>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     SECTION 1 — BERANDA (Hero)
+     ══════════════════════════════════════════ -->
+<section id="beranda">
+  <div class="glow-blob a"></div>
+  <div class="glow-blob b"></div>
+
+  <div class="hero-grid" style="position:relative;z-index:2">
+
+    <!-- Teks Hero -->
+    <div class="hero-content">
+      <div class="hero-tag">Halo, dunia! — Welcome</div>
+
+      <!-- ✏️ Ganti nama di sini -->
+      <h1 class="hero-name">Rafael Alif<br>Ramadhan</h1>
+
+      <!-- Teks animasi ketik (edit di script.js → array phrases) -->
+      <div class="hero-typing-wrap">
+        <span id="typed-text"></span><span class="cursor-blink"></span>
+      </div>
+
+      <!-- ✏️ Ganti deskripsi singkat di sini -->
+      <p class="hero-desc">
+        Seorang pelajar muda yang penuh semangat, terus belajar dan berkembang.
+        Percaya bahwa setiap langkah kecil adalah bagian dari perjalanan besar.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#tentang" class="btn-primary">Kenali Saya</a>
+        <a href="#kontak" class="btn-secondary">Hubungi Saya</a>
+      </div>
+
+      <!-- Tombol upload foto profil -->
+      <div style="margin-top:18px;display:flex;align-items:center;gap:12px">
+        <label for="foto-upload" style="
+          font-family:'Share Tech Mono',monospace;font-size:.75rem;
+          letter-spacing:1.5px;color:var(--text-muted);
+          border:1px dashed rgba(0,245,255,.3);border-radius:6px;
+          padding:8px 18px;cursor:pointer;
+          transition:all .2s;display:inline-block;
+        "
+          onmouseover="this.style.color='var(--neon-cyan)';this.style.borderColor='var(--neon-cyan)'"
+          onmouseout="this.style.color='var(--text-muted)';this.style.borderColor='rgba(0,245,255,.3)'">
+          📁 Pasang Foto Profil
+        </label>
+        <input type="file" id="foto-upload" accept="image/*" style="display:none"/>
+        <span id="foto-status" style="font-size:.78rem;font-family:'Share Tech Mono',monospace;color:var(--text-muted)"></span>
+      </div>
+      <!--
+        FOTO PERMANEN:
+        Untuk foto yang tidak hilang saat browser di-refresh,
+        letakkan file foto (misal: foto.jpg) di folder yang sama,
+        lalu di dalam <div id="orb-photo"> di bawah, ganti isinya dengan:
+        <img src="foto.jpg" alt="Rafael Alif Ramadhan" />
+      -->
+    </div>
+
+    <!-- Orb Visual + Foto Profil -->
+    <div class="hero-visual">
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+      <div class="orb-glow"></div>
+      <div class="orb-photo" id="orb-photo">
+        <div class="orb-photo-placeholder">
+          <span>📷</span>
+          Klik tombol<br>di bawah untuk<br>pasang foto
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECTION 2 — TENTANG SAYA
+     ══════════════════════════════════════════ -->
+<section id="tentang">
+  <div class="section-label">// about_me</div>
+  <h2 class="section-title">Tentang Saya</h2>
+
+  <div class="tentang-grid">
+
+    <!-- ✏️ Edit paragraf deskripsi diri di sini -->
+    <div class="tentang-text reveal">
+      <p>
+        Perkenalkan, saya <span>Rafael Alif Ramadhan</span> — seorang pelajar aktif yang saat ini menempuh pendidikan di
+        <span>SMKN 13 Bandung</span>. Saya percaya bahwa belajar bukan hanya tentang nilai, tetapi tentang cara berpikir dan bertumbuh.
+      </p>
+      <p>
+        Dengan jiwa yang selalu ingin tahu, saya tertarik pada dunia <span>teknologi, desain, dan kreativitas</span>.
+        Saya senang mengeksplorasi hal-hal baru dan terus mendorong diri untuk keluar dari zona nyaman.
+      </p>
+      <p>
+        Tujuan saya sederhana: menjadi versi terbaik dari diri sendiri, setiap harinya.
+      </p>
+    </div>
+
+    <!-- ✏️ Edit minat & hobi di sini -->
+    <div class="reveal" style="transition-delay:.15s">
+      <p style="font-family:'Share Tech Mono',monospace;font-size:.75rem;letter-spacing:3px;color:var(--neon-cyan);margin-bottom:16px;text-transform:uppercase">Minat & Hobi</p>
+      <div class="interests-grid">
+        <div class="interest-chip"><span class="ic">💻</span> Teknologi</div>
+        <div class="interest-chip"><span class="ic">🎨</span> Desain</div>
+        <div class="interest-chip"><span class="ic">🎮</span> Gaming</div>
+        <div class="interest-chip"><span class="ic">📸</span> Fotografi</div>
+        <div class="interest-chip"><span class="ic">🎵</span> Musik</div>
+        <div class="interest-chip"><span class="ic">📚</span> Membaca</div>
+        <div class="interest-chip"><span class="ic">🌐</span> Browsing</div>
+        <div class="interest-chip"><span class="ic">✏️</span> Menulis</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECTION 3 — RIWAYAT PENDIDIKAN
+     ══════════════════════════════════════════ -->
+<section id="pendidikan">
+  <div class="section-label">// education_path</div>
+  <h2 class="section-title">Riwayat Pendidikan</h2>
+
+  <div class="timeline">
+
+    <!-- ✏️ Item 1 - SD -->
+    <div class="timeline-item reveal">
+      <div class="tl-card">
+        <div class="tl-level">Sekolah Dasar · SD</div>
+        <div class="tl-school">SDN 162 Sukapura</div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-top:8px;line-height:1.6">
+          Pondasi awal perjalanan pendidikan. Tempat di mana rasa ingin tahu mulai tumbuh dan karakter dasar terbentuk.
+        </p>
+      </div>
+    </div>
+
+    <!-- ✏️ Item 2 - SMP -->
+    <div class="timeline-item reveal" style="transition-delay:.15s">
+      <div class="tl-card">
+        <div class="tl-level">Sekolah Menengah Pertama · SMP</div>
+        <div class="tl-school">SMP Kartika X-1 Bandung</div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-top:8px;line-height:1.6">
+          Masa berkembang, belajar bersosialisasi dan memperluas wawasan. Bandung menjadi saksi bisu setiap langkah bertumbuh.
+        </p>
+      </div>
+    </div>
+
+    <!-- ✏️ Item 3 - SMK (Aktif) -->
+    <div class="timeline-item reveal" style="transition-delay:.3s">
+      <div class="tl-card" style="border-color:rgba(0,245,255,.3)">
+        <div class="tl-level" style="color:var(--neon-pink)">Sekolah Menengah Kejuruan · SMK · Saat ini</div>
+        <div class="tl-school">SMKN 13 Bandung</div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-top:8px;line-height:1.6">
+          Bab terkini dalam perjalanan. Menggali ilmu kejuruan, membangun keahlian, dan mempersiapkan diri untuk masa depan yang cerah.
+        </p>
+        <span style="display:inline-block;margin-top:10px;font-size:.75rem;font-family:'Share Tech Mono',monospace;color:var(--neon-green);background:rgba(0,255,159,.08);border:1px solid rgba(0,255,159,.25);padding:3px 12px;border-radius:20px">▶ Aktif</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECTION 4 — SKILL / KEAHLIAN
+     ══════════════════════════════════════════ -->
+<section id="skill">
+  <div class="section-label">// skills &amp; abilities</div>
+  <h2 class="section-title">Keahlian</h2>
+
+  <div class="skill-categories">
+
+    <!-- ✏️ Kategori 1 - Ubah nama skill & persentase (width) -->
+    <div class="skill-cat reveal">
+      <div class="skill-cat-title" style="color:var(--neon-cyan)">💻 Teknologi</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Microsoft Office</span><span style="color:var(--neon-cyan)">85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" style="width:85%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>HTML & CSS Dasar</span><span style="color:var(--neon-cyan)">70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" style="width:70%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Penggunaan Internet</span><span style="color:var(--neon-cyan)">95%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" style="width:95%"></div></div>
+      </div>
+    </div>
+
+    <!-- ✏️ Kategori 2 -->
+    <div class="skill-cat reveal" style="transition-delay:.1s">
+      <div class="skill-cat-title" style="color:var(--neon-pink)">🎨 Desain & Kreativitas</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Canva</span><span style="color:var(--neon-pink)">80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-pink" style="width:80%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Editing Foto/Video</span><span style="color:var(--neon-pink)">72%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-pink" style="width:72%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Konten Kreatif</span><span style="color:var(--neon-pink)">78%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-pink" style="width:78%"></div></div>
+      </div>
+    </div>
+
+    <!-- ✏️ Kategori 3 -->
+    <div class="skill-cat reveal" style="transition-delay:.2s">
+      <div class="skill-cat-title" style="color:var(--neon-purple)">🧠 Soft Skills</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Komunikasi</span><span style="color:var(--neon-purple)">82%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-purple" style="width:82%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Kerja Tim</span><span style="color:var(--neon-purple)">88%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-purple" style="width:88%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Problem Solving</span><span style="color:var(--neon-purple)">75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-purple" style="width:75%"></div></div>
+      </div>
+    </div>
+
+    <!-- ✏️ Kategori 4 -->
+    <div class="skill-cat reveal" style="transition-delay:.3s">
+      <div class="skill-cat-title" style="color:var(--neon-green)">📱 Digital & Sosial</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Social Media</span><span style="color:var(--neon-green)">90%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-green" style="width:90%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Digital Marketing</span><span style="color:var(--neon-green)">60%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-green" style="width:60%"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Riset Online</span><span style="color:var(--neon-green)">85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-green" style="width:85%"></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECTION 5 — PORTOFOLIO
+     ══════════════════════════════════════════ -->
+<section id="portofolio">
+  <div class="section-label">// my_work</div>
+  <h2 class="section-title">Portofolio</h2>
+
+  <div class="porto-grid">
+
+    <!-- ✏️ Duplikat / edit kartu portofolio sesuai karya kamu -->
+    <div class="porto-card reveal">
+      <div class="porto-thumb" style="background:linear-gradient(135deg,rgba(0,245,255,.1),rgba(180,79,255,.1))">🌐</div>
+      <div class="porto-body">
+        <div class="porto-tags"><span class="porto-tag">HTML</span><span class="porto-tag">CSS</span></div>
+        <div class="porto-title">Web Personal Branding</div>
+        <p class="porto-desc">Halaman web personal yang menampilkan profil, keahlian, dan informasi kontak dengan desain modern dan responsif.</p>
+      </div>
+    </div>
+
+    <div class="porto-card reveal" style="transition-delay:.1s">
+      <div class="porto-thumb" style="background:linear-gradient(135deg,rgba(255,45,120,.1),rgba(255,230,0,.1))">🎨</div>
+      <div class="porto-body">
+        <div class="porto-tags">
+          <span class="porto-tag" style="border-color:rgba(255,45,120,.3);color:var(--neon-pink)">Canva</span>
+          <span class="porto-tag" style="border-color:rgba(255,45,120,.3);color:var(--neon-pink)">Desain</span>
+        </div>
+        <div class="porto-title">Desain dinding</div>
+        <p class="porto-desc">Berbagai karya desain grafis untuk media sosial, poster acara sekolah, dan konten digital dengan estetika yang menarik.</p>
+      </div>
+    </div>
+
+    <div class="porto-card reveal" style="transition-delay:.2s">
+      <div class="porto-thumb" style="background:linear-gradient(135deg,rgba(0,255,159,.1),rgba(0,245,255,.1))">📝</div>
+      <div class="porto-body">
+        <div class="porto-tags"><span class="porto-tag" style="border-color:rgba(0,255,159,.3);color:var(--neon-green)">Karya Tulis</span></div>
+        <div class="porto-title">Karya Tulis & Artikel</div>
+        <p class="porto-desc">Tulisan dan artikel yang mengeksplorasi berbagai topik mulai dari teknologi, kehidupan sehari-hari, hingga opini personal.</p>
+      </div>
+    </div>
+
+    <div class="porto-card reveal" style="transition-delay:.3s">
+      <div class="porto-thumb" style="background:linear-gradient(135deg,rgba(180,79,255,.1),rgba(255,45,120,.1))">📸</div>
+      <div class="porto-body">
+        <div class="porto-tags">
+          <span class="porto-tag" style="border-color:rgba(180,79,255,.3);color:var(--neon-purple)">Foto</span>
+          <span class="porto-tag" style="border-color:rgba(180,79,255,.3);color:var(--neon-purple)">Editing</span>
+        </div>
+        <div class="porto-title">Fotografi & Editing</div>
+        <p class="porto-desc">Koleksi foto dan hasil editing yang menangkap momen, ekspresi, dan keindahan visual dari sudut pandang seorang pelajar kreatif.</p>
+      </div>
+    </div>
+
+    <div class="porto-card reveal" style="transition-delay:.4s">
+      <div class="porto-thumb" style="background:linear-gradient(135deg,rgba(255,230,0,.08),rgba(0,245,255,.08))">🎬</div>
+      <div class="porto-body">
+        <div class="porto-tags"><span class="porto-tag" style="border-color:rgba(255,230,0,.3);color:var(--neon-yellow)">Video</span><span class="porto-tag" style="border-color:rgba(255,230,0,.3);color:var(--neon-yellow)">TikTok</span></div>
+        <div class="porto-title">Konten Video Kreatif</div>
+        <p class="porto-desc">Produksi konten video pendek yang menghibur dan informatif untuk platform media sosial, dengan konsep dan editing yang unik.</p>
+      </div>
+    </div>
+
+    <div class="porto-card reveal" style="transition-delay:.5s">
+      <div class="porto-thumb" style="background:linear-gradient(135deg,rgba(0,245,255,.08),rgba(0,255,159,.08))">🏫</div>
+      <div class="porto-body">
+        <div class="porto-tags"><span class="porto-tag">Sekolah</span><span class="porto-tag">Proyek</span></div>
+        <div class="porto-title">Proyek Sekolah</div>
+        <p class="porto-desc">Berbagai proyek dan tugas kejuruan di SMKN 13 Bandung yang mengasah kemampuan teknis dan soft skill secara nyata.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECTION 6 — KONTAK
+     ══════════════════════════════════════════ -->
+<section id="kontak">
+  <div class="section-label">// get_in_touch</div>
+  <h2 class="section-title">Kontak</h2>
+
+  <div class="kontak-grid">
+
+    <!-- ✏️ Ganti link & teks kontak sesuai akun kamu -->
+    <div class="reveal">
+      <p class="kontak-intro">
+        Ingin berkolaborasi, berdiskusi, atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui platform di bawah ini. Saya selalu terbuka untuk hal-hal baru! ✨
+      </p>
+      <div class="kontak-cards">
+
+        <a href="mailto:akurafael11@gmail.com" class="kontak-card email">
+          <div class="kontak-icon email">✉️</div>
+          <div>
+            <div class="kontak-label">Email</div>
+            <div class="kontak-value">akurafael11@gmail.com</div>
+          </div>
+        </a>
+
+        <a href="https://wa.me/6281321319741" target="_blank" class="kontak-card wa">
+          <div class="kontak-icon wa">💬</div>
+          <div>
+            <div class="kontak-label">WhatsApp</div>
+            <div class="kontak-value">+62 813-2131-9741</div>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/r.ramadhn__" target="_blank" class="kontak-card ig">
+          <div class="kontak-icon ig">📷</div>
+          <div>
+            <div class="kontak-label">Instagram</div>
+            <div class="kontak-value">@r.ramadhn__</div>
+          </div>
+        </a>
+
+        <a href="https://tiktok.com/@nameisell" target="_blank" class="kontak-card tiktok">
+          <div class="kontak-icon tiktok">🎵</div>
+          <div>
+            <div class="kontak-label">TikTok</div>
+            <div class="kontak-value">@nameisell</div>
+          </div>
+        </a>
+
+        <a href="https://discord.com/users/paelRibi" target="_blank" class="kontak-card discord">
+          <div class="kontak-icon discord">🎮</div>
+          <div>
+            <div class="kontak-label">Discord</div>
+            <div class="kontak-value">paelRibi#0000</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Form Pesan -->
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="kontak-form-title">Kirim Pesan 📨</div>
+      <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:18px">Ada yang ingin kamu sampaikan? Isi formulir di bawah ini!</p>
+      <div class="kontak-form-wrap">
+        <div class="form-group">
+          <label>NAMA KAMU</label>
+          <input type="text" placeholder="Siapa namamu?" />
+        </div>
+        <div class="form-group">
+          <label>EMAIL</label>
+          <input type="email" placeholder="emailkamu@domain.com" />
+        </div>
+        <div class="form-group">
+          <label>PESAN</label>
+          <textarea placeholder="Halo Rafael, aku ingin..."></textarea>
+        </div>
+        <button class="btn-primary" id="send-btn" onclick="handleSend()">Kirim Pesan →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <!-- ✏️ Ganti nama & tahun jika perlu -->
+  <p>Dibuat dengan <span>❤</span> oleh <span>Rafael Alif Ramadhan</span> · 2024</p>
+  <p style="margin-top:6px;font-size:.72rem">SMKN 13 Bandung · Bandung, Jawa Barat</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
