@@ -410,7 +410,7 @@ section {
 }
 .skill-cat:hover {
   border-color:var(--neon-purple);
-  box-shadow:0 0 20px rgba(180,79,255,.15);
+  box-shadow:0 0 20px rgba(147, 32, 235, 0.79);
 }
 .skill-cat-title {
   font-family:'Orbitron',monospace; font-weight:700;
