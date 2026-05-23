@@ -646,3 +646,8 @@ section, header, nav, footer {
   position: relative;
   z-index: 1;
 }
+
+nav, #shortcut-bar {
+  position: fixed;
+  z-index: 999;
+}
