@@ -41,10 +41,10 @@ document.querySelectorAll('a, button, .skill-cat, .porto-card, .kontak-card, .in
 /* ── TYPING ANIMATION ──
    Ganti isi array 'phrases' untuk mengubah teks yang diketik */
 const phrases = [
-  'Pelajar SMK yang Bersemangat',
-  'Pecinta Teknologi & Desain',
-  'Content Creator Muda',
-  'Selalu Belajar, Selalu Bertumbuh',
+  'Siswa SMK yang Bersemangat',
+  'Teknik Jaringan Komputer & Telekomunikasi',
+  'Gamers',
+  'Selalu Belajar Menjadi Lebih Baik,',
   'Rafael Alif Ramadhan 🚀'
 ];
 let pi = 0, ci = 0, deleting = false;
