@@ -647,7 +647,16 @@ section, header, nav, footer {
   z-index: 1;
 }
 
-nav, #shortcut-bar {
+nav {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
+}
+
+#shortcut-bar {
+  position: fixed;
+  z-index: 9999;
+}
+
+#stars-canvas {
+  z-index: -1;
 }
