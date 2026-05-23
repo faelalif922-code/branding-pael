@@ -197,8 +197,8 @@
         <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" style="width:75%"></div></div>
       </div>
       <div class="skill-bar-wrap">
-        <div class="skill-bar-label"><span>Virtualbox</span><span style="color:var(--neon-cyan)">78%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" style="width:78%"></div></div>
+        <div class="skill-bar-label"><span>Virtualbox</span><span style="color:var(--neon-cyan)">80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" style="width:80%"></div></div>
       </div>
     </div>
 
@@ -440,5 +440,50 @@
 
 <!-- JavaScript -->
 <script src="script.js"></script>
+<canvas id="stars-canvas"></canvas>
+<script>
+  const canvas = document.getElementById('stars-canvas');
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const stars = [];
+  const STAR_COUNT = 150;
+
+  for (let i = 0; i < STAR_COUNT; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5 + 0.5,
+      speed: Math.random() * 0.4 + 0.1,
+      opacity: Math.random()
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0, 245, 255, ${star.opacity})`;
+      ctx.fill();
+      star.y += star.speed;
+      star.opacity = 0.3 + Math.abs(Math.sin(Date.now() * 0.001 + star.x));
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
+    });
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
 </body>
 </html>

@@ -631,3 +631,18 @@ footer span { color:var(--neon-cyan); }
   object-fit: cover;
   border-radius: 12px;           /* Sudut foto agak melengkung */
 }
+
+#stars-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+section, header, nav, footer {
+  position: relative;
+  z-index: 1;
+}
